@@ -15,6 +15,7 @@
 		3FC327E81CF58AD800DE6FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC327E61CF58AD800DE6FFB /* LaunchScreen.storyboard */; };
 		3FC327F31CF58AD800DE6FFB /* CATCurveProgressViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327F21CF58AD800DE6FFB /* CATCurveProgressViewTests.m */; };
 		3FC327FE1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327FD1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m */; };
+		3FC328101CF58D8C00DE6FFB /* CATCurveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3280F1CF58D8C00DE6FFB /* CATCurveProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		3FC327F91CF58AD800DE6FFB /* CATCurveProgressViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATCurveProgressViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC327FD1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATCurveProgressViewUITests.m; sourceTree = "<group>"; };
 		3FC327FF1CF58AD800DE6FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC3280E1CF58D8C00DE6FFB /* CATCurveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATCurveProgressView.h; sourceTree = "<group>"; };
+		3FC3280F1CF58D8C00DE6FFB /* CATCurveProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATCurveProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		3FC327D71CF58AD800DE6FFB /* CATCurveProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				3FC3280D1CF58D8300DE6FFB /* CATCurveProgressView */,
 				3FC327DB1CF58AD800DE6FFB /* AppDelegate.h */,
 				3FC327DC1CF58AD800DE6FFB /* AppDelegate.m */,
 				3FC327DE1CF58AD800DE6FFB /* ViewController.h */,
@@ -138,6 +142,15 @@
 				3FC327FF1CF58AD800DE6FFB /* Info.plist */,
 			);
 			path = CATCurveProgressViewUITests;
+			sourceTree = "<group>";
+		};
+		3FC3280D1CF58D8300DE6FFB /* CATCurveProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3280E1CF58D8C00DE6FFB /* CATCurveProgressView.h */,
+				3FC3280F1CF58D8C00DE6FFB /* CATCurveProgressView.m */,
+			);
+			path = CATCurveProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			files = (
 				3FC327E01CF58AD800DE6FFB /* ViewController.m in Sources */,
 				3FC327DD1CF58AD800DE6FFB /* AppDelegate.m in Sources */,
+				3FC328101CF58D8C00DE6FFB /* CATCurveProgressView.m in Sources */,
 				3FC327DA1CF58AD800DE6FFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +512,7 @@
 				3FC328041CF58AD800DE6FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FC328051CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +521,7 @@
 				3FC328071CF58AD800DE6FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FC328081CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +530,7 @@
 				3FC3280A1CF58AD800DE6FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
