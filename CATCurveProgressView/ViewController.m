@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CATCurveProgressView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet CATCurveProgressView *progressView;
 
 @end
 
@@ -16,12 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _progressView.progress = 0.5f;
+    
+    [self performSelector:@selector(changeProgress) withObject:nil afterDelay:1.0];
+}
+
+-(void)changeProgress{
+    _progressView.progress = 0.8f;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
