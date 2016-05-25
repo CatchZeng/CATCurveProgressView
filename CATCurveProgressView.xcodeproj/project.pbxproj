@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FC327DA1CF58AD800DE6FFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327D91CF58AD800DE6FFB /* main.m */; };
+		3FC327DD1CF58AD800DE6FFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327DC1CF58AD800DE6FFB /* AppDelegate.m */; };
+		3FC327E01CF58AD800DE6FFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327DF1CF58AD800DE6FFB /* ViewController.m */; };
+		3FC327E31CF58AD800DE6FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC327E11CF58AD800DE6FFB /* Main.storyboard */; };
+		3FC327E51CF58AD800DE6FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC327E41CF58AD800DE6FFB /* Assets.xcassets */; };
+		3FC327E81CF58AD800DE6FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC327E61CF58AD800DE6FFB /* LaunchScreen.storyboard */; };
+		3FC327F31CF58AD800DE6FFB /* CATCurveProgressViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327F21CF58AD800DE6FFB /* CATCurveProgressViewTests.m */; };
+		3FC327FE1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC327FD1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FC327EF1CF58AD800DE6FFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC327CD1CF58AD800DE6FFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC327D41CF58AD800DE6FFB;
+			remoteInfo = CATCurveProgressView;
+		};
+		3FC327FA1CF58AD800DE6FFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC327CD1CF58AD800DE6FFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC327D41CF58AD800DE6FFB;
+			remoteInfo = CATCurveProgressView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FC327D51CF58AD800DE6FFB /* CATCurveProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATCurveProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC327D91CF58AD800DE6FFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FC327DB1CF58AD800DE6FFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3FC327DC1CF58AD800DE6FFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3FC327DE1CF58AD800DE6FFB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3FC327DF1CF58AD800DE6FFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3FC327E21CF58AD800DE6FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FC327E41CF58AD800DE6FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FC327E71CF58AD800DE6FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FC327E91CF58AD800DE6FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC327EE1CF58AD800DE6FFB /* CATCurveProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATCurveProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC327F21CF58AD800DE6FFB /* CATCurveProgressViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATCurveProgressViewTests.m; sourceTree = "<group>"; };
+		3FC327F41CF58AD800DE6FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC327F91CF58AD800DE6FFB /* CATCurveProgressViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATCurveProgressViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC327FD1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATCurveProgressViewUITests.m; sourceTree = "<group>"; };
+		3FC327FF1CF58AD800DE6FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC327D21CF58AD800DE6FFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC327EB1CF58AD800DE6FFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC327F61CF58AD800DE6FFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FC327CC1CF58AD800DE6FFB = {
+			isa = PBXGroup;
+			children = (
+				3FC327D71CF58AD800DE6FFB /* CATCurveProgressView */,
+				3FC327F11CF58AD800DE6FFB /* CATCurveProgressViewTests */,
+				3FC327FC1CF58AD800DE6FFB /* CATCurveProgressViewUITests */,
+				3FC327D61CF58AD800DE6FFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC327D61CF58AD800DE6FFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FC327D51CF58AD800DE6FFB /* CATCurveProgressView.app */,
+				3FC327EE1CF58AD800DE6FFB /* CATCurveProgressViewTests.xctest */,
+				3FC327F91CF58AD800DE6FFB /* CATCurveProgressViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FC327D71CF58AD800DE6FFB /* CATCurveProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				3FC327DB1CF58AD800DE6FFB /* AppDelegate.h */,
+				3FC327DC1CF58AD800DE6FFB /* AppDelegate.m */,
+				3FC327DE1CF58AD800DE6FFB /* ViewController.h */,
+				3FC327DF1CF58AD800DE6FFB /* ViewController.m */,
+				3FC327E11CF58AD800DE6FFB /* Main.storyboard */,
+				3FC327E41CF58AD800DE6FFB /* Assets.xcassets */,
+				3FC327E61CF58AD800DE6FFB /* LaunchScreen.storyboard */,
+				3FC327E91CF58AD800DE6FFB /* Info.plist */,
+				3FC327D81CF58AD800DE6FFB /* Supporting Files */,
+			);
+			path = CATCurveProgressView;
+			sourceTree = "<group>";
+		};
+		3FC327D81CF58AD800DE6FFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC327D91CF58AD800DE6FFB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FC327F11CF58AD800DE6FFB /* CATCurveProgressViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC327F21CF58AD800DE6FFB /* CATCurveProgressViewTests.m */,
+				3FC327F41CF58AD800DE6FFB /* Info.plist */,
+			);
+			path = CATCurveProgressViewTests;
+			sourceTree = "<group>";
+		};
+		3FC327FC1CF58AD800DE6FFB /* CATCurveProgressViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC327FD1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m */,
+				3FC327FF1CF58AD800DE6FFB /* Info.plist */,
+			);
+			path = CATCurveProgressViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FC327D41CF58AD800DE6FFB /* CATCurveProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC328021CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressView" */;
+			buildPhases = (
+				3FC327D11CF58AD800DE6FFB /* Sources */,
+				3FC327D21CF58AD800DE6FFB /* Frameworks */,
+				3FC327D31CF58AD800DE6FFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CATCurveProgressView;
+			productName = CATCurveProgressView;
+			productReference = 3FC327D51CF58AD800DE6FFB /* CATCurveProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FC327ED1CF58AD800DE6FFB /* CATCurveProgressViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC328051CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressViewTests" */;
+			buildPhases = (
+				3FC327EA1CF58AD800DE6FFB /* Sources */,
+				3FC327EB1CF58AD800DE6FFB /* Frameworks */,
+				3FC327EC1CF58AD800DE6FFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC327F01CF58AD800DE6FFB /* PBXTargetDependency */,
+			);
+			name = CATCurveProgressViewTests;
+			productName = CATCurveProgressViewTests;
+			productReference = 3FC327EE1CF58AD800DE6FFB /* CATCurveProgressViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FC327F81CF58AD800DE6FFB /* CATCurveProgressViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC328081CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressViewUITests" */;
+			buildPhases = (
+				3FC327F51CF58AD800DE6FFB /* Sources */,
+				3FC327F61CF58AD800DE6FFB /* Frameworks */,
+				3FC327F71CF58AD800DE6FFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC327FB1CF58AD800DE6FFB /* PBXTargetDependency */,
+			);
+			name = CATCurveProgressViewUITests;
+			productName = CATCurveProgressViewUITests;
+			productReference = 3FC327F91CF58AD800DE6FFB /* CATCurveProgressViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FC327CD1CF58AD800DE6FFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = catch;
+				TargetAttributes = {
+					3FC327D41CF58AD800DE6FFB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					3FC327ED1CF58AD800DE6FFB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3FC327D41CF58AD800DE6FFB;
+					};
+					3FC327F81CF58AD800DE6FFB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3FC327D41CF58AD800DE6FFB;
+					};
+				};
+			};
+			buildConfigurationList = 3FC327D01CF58AD800DE6FFB /* Build configuration list for PBXProject "CATCurveProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FC327CC1CF58AD800DE6FFB;
+			productRefGroup = 3FC327D61CF58AD800DE6FFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FC327D41CF58AD800DE6FFB /* CATCurveProgressView */,
+				3FC327ED1CF58AD800DE6FFB /* CATCurveProgressViewTests */,
+				3FC327F81CF58AD800DE6FFB /* CATCurveProgressViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC327D31CF58AD800DE6FFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC327E81CF58AD800DE6FFB /* LaunchScreen.storyboard in Resources */,
+				3FC327E51CF58AD800DE6FFB /* Assets.xcassets in Resources */,
+				3FC327E31CF58AD800DE6FFB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC327EC1CF58AD800DE6FFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC327F71CF58AD800DE6FFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FC327D11CF58AD800DE6FFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC327E01CF58AD800DE6FFB /* ViewController.m in Sources */,
+				3FC327DD1CF58AD800DE6FFB /* AppDelegate.m in Sources */,
+				3FC327DA1CF58AD800DE6FFB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC327EA1CF58AD800DE6FFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC327F31CF58AD800DE6FFB /* CATCurveProgressViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC327F51CF58AD800DE6FFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC327FE1CF58AD800DE6FFB /* CATCurveProgressViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FC327F01CF58AD800DE6FFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC327D41CF58AD800DE6FFB /* CATCurveProgressView */;
+			targetProxy = 3FC327EF1CF58AD800DE6FFB /* PBXContainerItemProxy */;
+		};
+		3FC327FB1CF58AD800DE6FFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC327D41CF58AD800DE6FFB /* CATCurveProgressView */;
+			targetProxy = 3FC327FA1CF58AD800DE6FFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FC327E11CF58AD800DE6FFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC327E21CF58AD800DE6FFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FC327E61CF58AD800DE6FFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC327E71CF58AD800DE6FFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FC328001CF58AD800DE6FFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FC328011CF58AD800DE6FFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FC328031CF58AD800DE6FFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CATCurveProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catch.CATCurveProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3FC328041CF58AD800DE6FFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CATCurveProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catch.CATCurveProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3FC328061CF58AD800DE6FFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CATCurveProgressViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catch.CATCurveProgressViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CATCurveProgressView.app/CATCurveProgressView";
+			};
+			name = Debug;
+		};
+		3FC328071CF58AD800DE6FFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CATCurveProgressViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catch.CATCurveProgressViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CATCurveProgressView.app/CATCurveProgressView";
+			};
+			name = Release;
+		};
+		3FC328091CF58AD800DE6FFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CATCurveProgressViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catch.CATCurveProgressViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CATCurveProgressView;
+			};
+			name = Debug;
+		};
+		3FC3280A1CF58AD800DE6FFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CATCurveProgressViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catch.CATCurveProgressViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CATCurveProgressView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC327D01CF58AD800DE6FFB /* Build configuration list for PBXProject "CATCurveProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC328001CF58AD800DE6FFB /* Debug */,
+				3FC328011CF58AD800DE6FFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC328021CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC328031CF58AD800DE6FFB /* Debug */,
+				3FC328041CF58AD800DE6FFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FC328051CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC328061CF58AD800DE6FFB /* Debug */,
+				3FC328071CF58AD800DE6FFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FC328081CF58AD800DE6FFB /* Build configuration list for PBXNativeTarget "CATCurveProgressViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC328091CF58AD800DE6FFB /* Debug */,
+				3FC3280A1CF58AD800DE6FFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FC327CD1CF58AD800DE6FFB /* Project object */;
+}
