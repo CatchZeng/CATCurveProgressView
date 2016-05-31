@@ -14,11 +14,11 @@
 @optional
 
 /**
- *  进度变化回调
+ *  Progress report
  *
- *  @param progressView 进度视图
- *  @param progress     更新的进度
- *  @param lastProgress 上一次的进度
+ *  @param progressView CATCurveProgressView
+ *  @param progress     progress changed
+ *  @param lastProgress progress last time
  */
 -(void)progressView:(CATCurveProgressView *)progressView progressChanged:(CGFloat)progress lastProgress:(CGFloat)lastProgress;
 
@@ -29,40 +29,41 @@ IB_DESIGNABLE
 
 @interface CATCurveProgressView : UIView
 
-//圆弧背景颜色
+//Curve background color
 @property (nonatomic, strong) IBInspectable UIColor *curveBgColor;
 
-//是否开启渐变
+//Enable gradient effect
 @property (nonatomic, assign) IBInspectable CGFloat enableGradient;
 
-//渐变layer1［供自定义渐变效果设置其属性］
+//Gradient layer1［you can custom gradient effect by set gradient layer1's property］
 @property (nonatomic, strong ,readonly) CAGradientLayer *gradientLayer1;
 
-//渐变layer2［供自定义渐变效果设置其属性］
+//Gradient layer2［you can custom gradient effect by set gradient layer2's property］
 @property (nonatomic, strong ,readonly) CAGradientLayer *gradientLayer2;
 
-//未开启渐变时进度条的颜色 [!!!不能用clearColor]
+//Progress color when gradient effect is disable [!!!do no use clearColor]
 @property (nonatomic, strong) IBInspectable UIColor *progressColor;
 
-//进度条的宽度
+//Progress line width
 @property (nonatomic, assign) IBInspectable CGFloat progressLineWidth;
 
-//开始的角度
+//Start angle
 @property (nonatomic, assign) IBInspectable int startAngle;
 
-//结束的角度
+//End angle
 @property (nonatomic, assign) IBInspectable int endAngle;
 
-//进度[0.0-1.0]
+//Progress [0.0-1.0]
 @property (nonatomic, assign) IBInspectable CGFloat progress;
 
+//Delegate
 @property (nonatomic, weak) IBOutlet id<CATCurveProgressViewDelegate> delegate;
 
 /**
- *  设置进度条的百分比
+ *  Set progress
  *
- *  @param progress 进度[0.0-1.0]
- *  @param animated 是否开启动画
+ *  @param progress progress[0.0-1.0]
+ *  @param animated enbale animation?
  */
 -(void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 

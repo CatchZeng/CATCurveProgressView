@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //自定义渐变效果
+    //custom gradient effect
     //    _progressView.enableGradient = YES;
     //    _progressView.gradientLayer1.colors = [NSArray arrayWithObjects:(id)[UIColor blueColor].CGColor,(id)[UIColor greenColor].CGColor,nil];
     //    _progressView.gradientLayer2.colors = [NSArray arrayWithObjects:(id)[UIColor blueColor].CGColor,(id)[UIColor yellowColor].CGColor,nil];

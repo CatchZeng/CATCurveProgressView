@@ -8,14 +8,14 @@
 
 #import "CATCurveProgressView.h"
 
-//角度转换成PI
-#define MBDegreesToRadians(x) (M_PI*(x)/180.0)
+//Degress to PI
+#define CATDegreesToRadians(x) (M_PI*(x)/180.0)
 
-//进度条的默认值
-#define MBProgressLineWidth      (10)
-#define MBProgressStartAngle     (-210)
-#define MBProgressEndAngle       (30)
-#define MBProgressCurveBgColor   [UIColor cyanColor]
+//Defalut value
+#define CATProgressLineWidth      (10)
+#define CATProgressStartAngle     (-210)
+#define CATProgressEndAngle       (30)
+#define CATProgressCurveBgColor   [UIColor cyanColor]
 
 @interface CATCurveProgressView()
 
@@ -68,7 +68,7 @@
 
 -(void)_commonInit{
     //1.背景轨道
-    _curveBgColor = MBProgressCurveBgColor;
+    _curveBgColor = CATProgressCurveBgColor;
     _trackLayer=[CAShapeLayer layer];
     _trackLayer.frame=self.bounds;
     _trackLayer.fillColor = [UIColor clearColor].CGColor;
@@ -85,9 +85,9 @@
     _progressLayer.lineCap=kCALineCapRound;
     _progressLayer.strokeEnd=0.0;
     
-    _startAngle = MBProgressStartAngle;
-    _endAngle = MBProgressEndAngle;
-    _progressLineWidth = MBProgressLineWidth;
+    _startAngle = CATProgressStartAngle;
+    _endAngle = CATProgressEndAngle;
+    _progressLineWidth = CATProgressLineWidth;
     
     //3.是否开启渐变
     [self setEnableGradient:NO];
@@ -173,7 +173,7 @@
     
     _trackLayer.lineWidth = _progressLineWidth;
     CGFloat radius = self.frame.size.width/2-_progressLineWidth;
-    UIBezierPath *path=[UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:radius startAngle:MBDegreesToRadians(_startAngle) endAngle:MBDegreesToRadians(_endAngle) clockwise:YES];//-210到30的path
+    UIBezierPath *path=[UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:radius startAngle:CATDegreesToRadians(_startAngle) endAngle:CATDegreesToRadians(_endAngle) clockwise:YES];//-210到30的path
     _trackLayer.path=path.CGPath;
     
     _progressLayer.path = path.CGPath;
