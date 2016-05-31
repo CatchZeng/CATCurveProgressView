@@ -1,6 +1,6 @@
 # CATCurveProgressView
 
-iOS custom  curve (circular、arc) progress view, supports gradient color, any angle, IBDesignable & IBInspectable, etc..
+iOS custom  curve (circular、arc、circle) progress view, supports gradient color, any angle, IBDesignable & IBInspectable, etc..
 
 # Effect
 
@@ -14,7 +14,7 @@ You can init CATCurveProgressView in code or xib.
 
 
 Change progress
-```
+```objective-c
 
 _progressView1.progress = 0.9f;
 //or
@@ -23,7 +23,7 @@ _progressView1.progress = 0.9f;
 ```
 
 Customization
-```
+```objective-c
 //Curve background color
 @property (nonatomic, strong) IBInspectable UIColor *curveBgColor;
 
@@ -51,7 +51,7 @@ Customization
 ```
 
 Delegate
-```
+```objective-c
 /**
  *  Progress report
  *
