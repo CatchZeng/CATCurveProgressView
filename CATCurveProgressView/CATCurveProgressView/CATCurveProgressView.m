@@ -106,6 +106,8 @@
 #pragma mark -- Public Methods
 
 -(void)setProgress:(CGFloat)progress animated:(BOOL)animated{
+    progress = progress < 0.0f ? 0.0f : progress;
+    progress = progress > 1.0f ? 1.0f : progress;
     _lastProgress = _progress;
     _progress = progress;
     [CATransaction begin];
