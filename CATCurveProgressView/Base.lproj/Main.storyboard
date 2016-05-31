@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,39 +19,134 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeZ-h6-OcM" customClass="CATCurveProgressView">
-                                <rect key="frame" x="260" y="260" width="80" height="80"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="450" y="50" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Ldm-cl-6fb"/>
-                                    <constraint firstAttribute="height" constant="80" id="QqL-hj-m9a"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ldm-cl-6fb"/>
+                                    <constraint firstAttribute="height" constant="100" id="QqL-hj-m9a"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.5"/>
+                                        <real key="value" value="0.20000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="enableGradient">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <integer key="value" value="-180"/>
+                                        <integer key="value" value="-210"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
-                                        <integer key="value" value="0"/>
+                                        <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDt-UZ-bHf" customClass="CATCurveProgressView">
+                                <rect key="frame" x="30" y="50" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KUo-Wz-tWV"/>
+                                    <constraint firstAttribute="height" constant="100" id="qdc-6s-TmQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <integer key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
+                                        <integer key="value" value="270"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.23760589450917496" green="0.62200153040008888" blue="0.98606085777282715" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="curveBgColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AfJ-pi-rPS" customClass="CATCurveProgressView">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wge-No-gYG"/>
+                                    <constraint firstAttribute="width" constant="100" id="fGF-b2-Xhp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <integer key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
+                                        <integer key="value" value="270"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="enableGradient">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="curveBgColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1a-ly-EIR" customClass="CATCurveProgressView">
+                                <rect key="frame" x="250" y="431" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="g9S-jm-Msd"/>
+                                    <constraint firstAttribute="width" constant="100" id="mT1-AA-1jZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
+                                        <integer key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="enableGradient">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="curveBgColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7bZ-VK-Aeo"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qDt-UZ-bHf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="4AK-0c-mcv"/>
+                            <constraint firstItem="AfJ-pi-rPS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6JA-Kx-u3b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VeZ-h6-OcM" secondAttribute="trailing" constant="30" id="9PX-xx-CyV"/>
                             <constraint firstItem="VeZ-h6-OcM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DOQ-H1-9Dm"/>
                             <constraint firstItem="VeZ-h6-OcM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FaI-P9-bJ4"/>
+                            <constraint firstItem="VeZ-h6-OcM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="HaF-fm-c0y"/>
+                            <constraint firstItem="W1a-ly-EIR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xh3-JO-SBb"/>
+                            <constraint firstItem="qDt-UZ-bHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="lWU-Ss-VPh"/>
+                            <constraint firstItem="AfJ-pi-rPS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="spH-Jx-0VM"/>
+                            <constraint firstItem="W1a-ly-EIR" firstAttribute="top" secondItem="AfJ-pi-rPS" secondAttribute="bottom" constant="81" id="x77-zN-Qre"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DOQ-H1-9Dm"/>
+                                <exclude reference="FaI-P9-bJ4"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="progressView" destination="VeZ-h6-OcM" id="uw7-et-LBp"/>
+                        <outlet property="progressView1" destination="qDt-UZ-bHf" id="dUe-ey-iX2"/>
+                        <outlet property="progressView2" destination="VeZ-h6-OcM" id="hxX-e3-eqC"/>
+                        <outlet property="progressView3" destination="AfJ-pi-rPS" id="y32-AK-alb"/>
+                        <outlet property="progressView4" destination="W1a-ly-EIR" id="p7O-bm-PPT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

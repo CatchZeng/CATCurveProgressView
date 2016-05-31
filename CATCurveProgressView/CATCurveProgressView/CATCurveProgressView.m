@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) CAShapeLayer *trackLayer;
 @property (nonatomic, strong) CAShapeLayer *progressLayer;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer1;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer2;
 @property (nonatomic, strong) CALayer *gradientLayer;
 @property (nonatomic, assign) CGFloat lastProgress;
 
@@ -131,7 +133,9 @@
 -(void)setEnableGradient:(CGFloat)enableGradient{
     _enableGradient = enableGradient;
     if (_enableGradient) {
-        [_progressLayer removeFromSuperlayer];
+        if (_progressLayer) {
+            [_progressLayer removeFromSuperlayer];
+        }
         if (![self.layer.sublayers containsObject:self.gradientLayer]) {
             [self.layer addSublayer:self.gradientLayer];
         }
@@ -145,6 +149,15 @@
         }
     }
 }
+
+-(NSArray *)arrayFromColorArray:(NSArray *)colorArray{
+    NSMutableArray* array = [NSMutableArray arrayWithCapacity:colorArray.count];
+    for (UIColor* color in colorArray) {
+        [array addObject:(id)color.CGColor];
+    }
+    return array;
+}
+
 
 -(void)setProgressColor:(UIColor *)progressColor{
     if (!progressColor) return;
@@ -183,20 +196,20 @@
     if(_gradientLayer == nil) {
         _gradientLayer=[CALayer layer];
         
-        CAGradientLayer *gradientLayer1=[CAGradientLayer layer];
-        gradientLayer1.frame=CGRectMake(0, 0, self.bounds.size.width/2,  self.bounds.size.height);
-        [gradientLayer1 setColors:[NSArray arrayWithObjects:(id)[UIColor cyanColor].CGColor,(id)[UIColor blueColor].CGColor, nil]];
-        [gradientLayer1 setStartPoint:CGPointMake(0.5, 0.2)];//颜色比例（0－1之间）
-        [gradientLayer1 setEndPoint:CGPointMake(0.5, 0.5)];
-        [_gradientLayer addSublayer:gradientLayer1];
+        _gradientLayer1=[CAGradientLayer layer];
+        _gradientLayer1.frame=CGRectMake(0, 0, self.bounds.size.width/2,  self.bounds.size.height);
+        [_gradientLayer1 setColors:[NSArray arrayWithObjects:(id)[UIColor yellowColor].CGColor,(id)[UIColor cyanColor].CGColor, nil]];
+        [_gradientLayer1 setStartPoint:CGPointMake(0.5, 0.2)];//颜色比例（0－1之间）
+        [_gradientLayer1 setEndPoint:CGPointMake(0.5, 0.5)];
+        [_gradientLayer addSublayer:_gradientLayer1];
         
-        CAGradientLayer *gradientLayer2=[CAGradientLayer layer];
-        gradientLayer2.frame=CGRectMake(self.bounds.size.width/2, 0,self.bounds.size.width/2 , self.bounds.size.height);
-        [gradientLayer2 setColors:[NSArray arrayWithObjects:(id)[UIColor cyanColor].CGColor,(id)[UIColor greenColor].CGColor, nil]];
-        [gradientLayer2 setStartPoint:CGPointMake(0.5,0.2)];//颜色比例（0－1之间）
-        [gradientLayer2 setEndPoint:CGPointMake(0.5, 0.5)];
+        _gradientLayer2=[CAGradientLayer layer];
+        _gradientLayer2.frame=CGRectMake(self.bounds.size.width/2, 0,self.bounds.size.width/2 , self.bounds.size.height);
+        [_gradientLayer2 setColors:[NSArray arrayWithObjects:(id)[UIColor yellowColor].CGColor,(id)[UIColor greenColor].CGColor, nil]];
+        [_gradientLayer2 setStartPoint:CGPointMake(0.5,0.2)];//颜色比例（0－1之间）
+        [_gradientLayer2 setEndPoint:CGPointMake(0.5, 0.5)];
         
-        [_gradientLayer addSublayer:gradientLayer2];
+        [_gradientLayer addSublayer:_gradientLayer2];
         [_gradientLayer setMask:_progressLayer];
     }
     return _gradientLayer;

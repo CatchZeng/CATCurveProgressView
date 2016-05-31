@@ -11,7 +11,10 @@
 
 @interface ViewController ()<CATCurveProgressViewDelegate>
 
-@property (weak, nonatomic) IBOutlet CATCurveProgressView *progressView;
+@property (weak, nonatomic) IBOutlet CATCurveProgressView *progressView1;
+@property (weak, nonatomic) IBOutlet CATCurveProgressView *progressView2;
+@property (weak, nonatomic) IBOutlet CATCurveProgressView *progressView3;
+@property (weak, nonatomic) IBOutlet CATCurveProgressView *progressView4;
 
 @end
 
@@ -20,20 +23,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _progressView.progressColor = [UIColor blackColor];
-    _progressView.delegate = self;
-    _progressView.progress = 0.5f;
-    _progressView.progressLineWidth = 10.0f;
+    //自定义渐变效果
+    //    _progressView.enableGradient = YES;
+    //    _progressView.gradientLayer1.colors = [NSArray arrayWithObjects:(id)[UIColor blueColor].CGColor,(id)[UIColor greenColor].CGColor,nil];
+    //    _progressView.gradientLayer2.colors = [NSArray arrayWithObjects:(id)[UIColor blueColor].CGColor,(id)[UIColor yellowColor].CGColor,nil];
     
     [self performSelector:@selector(changeProgress) withObject:nil afterDelay:1.0];
 }
 
 -(void)changeProgress{
-    _progressView.progress = 0.8f;
+    _progressView1.progress = 0.9f;
+    _progressView2.progress = 1.0f;
+    _progressView3.progress = 1.0f;
+    _progressView4.progress = 1.0f;
 }
 
 -(void)progressView:(CATCurveProgressView *)progressView progressChanged:(CGFloat)progress lastProgress:(CGFloat)lastProgress{
-    
+    NSLog(@"lastProgress = %.1f    progress = %.1f",lastProgress,progress);
 }
 
 - (void)didReceiveMemoryWarning {

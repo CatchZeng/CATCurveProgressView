@@ -35,6 +35,12 @@ IB_DESIGNABLE
 //是否开启渐变
 @property (nonatomic, assign) IBInspectable CGFloat enableGradient;
 
+//渐变layer1［供自定义渐变效果设置其属性］
+@property (nonatomic, strong ,readonly) CAGradientLayer *gradientLayer1;
+
+//渐变layer2［供自定义渐变效果设置其属性］
+@property (nonatomic, strong ,readonly) CAGradientLayer *gradientLayer2;
+
 //未开启渐变时进度条的颜色 [!!!不能用clearColor]
 @property (nonatomic, strong) IBInspectable UIColor *progressColor;
 
@@ -50,7 +56,7 @@ IB_DESIGNABLE
 //进度[0.0-1.0]
 @property (nonatomic, assign) IBInspectable CGFloat progress;
 
-@property (nonatomic, weak) id<CATCurveProgressViewDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<CATCurveProgressViewDelegate> delegate;
 
 /**
  *  设置进度条的百分比
