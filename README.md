@@ -6,6 +6,18 @@ iOS custom  curve (circular、arc、circle) progress view, supports gradient col
 
 ![Effect](https://github.com/CatchZeng/CATCurveProgressView/blob/master/images/1.gif)
 
+# Installation
+
+Note: Remember to add use_frameworks!
+
+```
+use_frameworks!
+
+pod 'CATCurveProgressView'
+
+```
+
+
 # Usage
 
 You can init CATCurveProgressView in code or xib.

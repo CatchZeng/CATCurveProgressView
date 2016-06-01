@@ -130,6 +130,9 @@
 -(void)setCurveBgColor:(UIColor *)curveBgColor{
     _curveBgColor = curveBgColor;
     _trackLayer.strokeColor = _curveBgColor.CGColor;
+    //set opacity
+    CGFloat opacity = CGColorGetAlpha(_curveBgColor.CGColor);
+    _trackLayer.opacity = opacity;
 }
 
 -(void)setEnableGradient:(CGFloat)enableGradient{
