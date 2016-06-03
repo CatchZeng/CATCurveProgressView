@@ -35,6 +35,12 @@ IB_DESIGNABLE
 //Enable gradient effect
 @property (nonatomic, assign) IBInspectable CGFloat enableGradient;
 
+//Set gradient origin color
+@property (nonatomic, assign) IBInspectable UIColor *gradient1;
+
+//Set gradient ending color
+@property (nonatomic, assign) IBInspectable UIColor *gradient2;
+
 //Gradient layer1［you can custom gradient effect by set gradient layer1's property］
 @property (nonatomic, strong ,readonly) CAGradientLayer *gradientLayer1;
 
