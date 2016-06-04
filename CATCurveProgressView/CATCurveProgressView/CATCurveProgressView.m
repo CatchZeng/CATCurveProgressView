@@ -15,7 +15,10 @@
 #define CATProgressLineWidth      (10)
 #define CATProgressStartAngle     (-210)
 #define CATProgressEndAngle       (30)
-#define CATProgressCurveBgColor   [UIColor cyanColor]
+#define CATProgressCurveBgColor   [UIColor colorWithRed:3/255.0f green:252/255.0f blue:254/255.0f alpha:0.25]
+#define CATGradientColor          [UIColor cyanColor]
+#define CATGradient1Color         [UIColor blueColor]
+#define CATGradient2Color         [UIColor redColor]
 
 @interface CATCurveProgressView()
 
@@ -67,17 +70,16 @@
 }
 
 -(void)_commonInit{
-    //1.背景轨道
+    //1.Track layer
     _curveBgColor = CATProgressCurveBgColor;
     _trackLayer=[CAShapeLayer layer];
     _trackLayer.frame=self.bounds;
     _trackLayer.fillColor = [UIColor clearColor].CGColor;
     _trackLayer.strokeColor = _curveBgColor.CGColor;
-    _trackLayer.opacity = 0.25;//背景圆环的背景透明度
     _trackLayer.lineCap = kCALineCapRound;
     [self.layer addSublayer:_trackLayer];
     
-    //2.进度轨道
+    //2.Progress layer
     _progressLayer=[CAShapeLayer layer];
     _progressLayer.frame=self.bounds;
     _progressLayer.fillColor=[[UIColor clearColor] CGColor];
@@ -85,12 +87,14 @@
     _progressLayer.lineCap=kCALineCapRound;
     _progressLayer.strokeEnd=0.0;
     
+    _gradient1 = CATGradient1Color;
+    _gradient2 = CATGradient2Color;
     _startAngle = CATProgressStartAngle;
     _endAngle = CATProgressEndAngle;
     _progressLineWidth = CATProgressLineWidth;
     
-    //3.是否开启渐变
-    [self setEnableGradient:YES];
+    //3.Enable gradient
+    [self setEnableGradient:NO];
 }
 
 -(void)layoutSubviews{
@@ -114,8 +118,6 @@
     [CATransaction setDisableActions:!animated];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
     [CATransaction setAnimationDuration:1];
-    progress = progress < 0.0 ? 0.0 : progress;
-    progress = progress > 1.0 ? 1.0 : progress;
     _progressLayer.strokeEnd=progress;
     [CATransaction commit];
     
@@ -130,9 +132,6 @@
 -(void)setCurveBgColor:(UIColor *)curveBgColor{
     _curveBgColor = curveBgColor;
     _trackLayer.strokeColor = _curveBgColor.CGColor;
-    //set opacity
-    CGFloat opacity = CGColorGetAlpha(_curveBgColor.CGColor);
-    _trackLayer.opacity = opacity;
 }
 
 //Enable gradient effect
@@ -200,7 +199,7 @@
     
     _trackLayer.lineWidth = _progressLineWidth;
     CGFloat radius = self.frame.size.width/2-_progressLineWidth;
-    UIBezierPath *path=[UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:radius startAngle:CATDegreesToRadians(_startAngle) endAngle:CATDegreesToRadians(_endAngle) clockwise:YES];//-210到30的path
+    UIBezierPath *path=[UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:radius startAngle:CATDegreesToRadians(_startAngle) endAngle:CATDegreesToRadians(_endAngle) clockwise:YES];
     _trackLayer.path=path.CGPath;
     
     _progressLayer.path = path.CGPath;
@@ -227,15 +226,18 @@
         
         _gradientLayer1=[CAGradientLayer layer];
         _gradientLayer1.frame=CGRectMake(0, 0, self.bounds.size.width/2,  self.bounds.size.height);
-        [_gradientLayer1 setColors:[NSArray arrayWithObjects:(id)_progressColor.CGColor,(id)_gradient1.CGColor, nil]];
-        [_gradientLayer1 setStartPoint:CGPointMake(0.5, 0.2)];//颜色比例（0－1之间）
+        
+        UIColor* gradientColor = _progressColor ? _progressColor : CATGradientColor;
+        
+        [_gradientLayer1 setColors:[NSArray arrayWithObjects:(id)gradientColor.CGColor,(id)_gradient1.CGColor, nil]];
+        [_gradientLayer1 setStartPoint:CGPointMake(0.5, 0.2)];//[0 - 1]
         [_gradientLayer1 setEndPoint:CGPointMake(0.5, 0.5)];
         [_gradientLayer addSublayer:_gradientLayer1];
         
         _gradientLayer2=[CAGradientLayer layer];
         _gradientLayer2.frame=CGRectMake(self.bounds.size.width/2, 0,self.bounds.size.width/2 , self.bounds.size.height);
-        [_gradientLayer2 setColors:[NSArray arrayWithObjects:(id)_progressColor.CGColor,(id)_gradient2.CGColor, nil]];
-        [_gradientLayer2 setStartPoint:CGPointMake(0.5,0.2)];//颜色比例（0－1之间）
+        [_gradientLayer2 setColors:[NSArray arrayWithObjects:(id)gradientColor.CGColor,(id)_gradient2.CGColor, nil]];
+        [_gradientLayer2 setStartPoint:CGPointMake(0.5,0.2)];//[0 - 1]
         [_gradientLayer2 setEndPoint:CGPointMake(0.5, 0.5)];
         
         [_gradientLayer addSublayer:_gradientLayer2];
